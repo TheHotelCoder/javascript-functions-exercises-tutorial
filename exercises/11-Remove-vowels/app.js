@@ -1,12 +1,25 @@
 
-const rapid = (myString) => {
-    let consonants = [];
-    for(let position in myString){
-        if(['a','e','i','o','u'].includes(myString[position]) == false)
-            consonants.push(myString[position])
+// const rapid = (myString) => {
+//     let consonants = [];
+//     for(let position in myString){
+//         if(['a','e','i','o','u'].includes(myString[position]) == false)
+//             consonants.push(myString[position])
+//     }
+//     return consonants.join('').toUpperCase();
+// }
+
+
+const rapid = (string) => {
+    let newString = []
+    for(let x in string) {
+        if (string[x] != "a" && string[x] != "e" && string[x] != "i" && string[x] != "o" && string[x] != "u") {
+            newString.push(string[x].toUpperCase())
+        }
     }
-    return consonants.join('').toUpperCase();
+ return newString.join("")
 }
+
+
 // From this line up Do not change code below
 let str = "John";
 console.log(rapid(str));
